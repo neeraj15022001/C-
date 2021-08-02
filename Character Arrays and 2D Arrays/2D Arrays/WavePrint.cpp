@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+void wavePrint(int **input, int nRows, int mCols)
+{
+    int colIndex = 0;
+    while(colIndex <= mCols - 1) {
+      for(int i = 0; i < nRows; i++) {
+        cout << input[i][colIndex] << " ";
+      }
+      colIndex++;
+      // cout << "colIndex " << colIndex << " mCols -1 " << mCols - 1 << endl; 
+      if(colIndex <= mCols - 1) {
+          for(int i = nRows - 1; i >= 0; i--) {
+            cout << input[i][colIndex] << " ";
+          }
+          colIndex++;
+      }
+      
+    }
+    cout << endl;
+}
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		int row, col;
+		cin >> row >> col;
+		int **input = new int *[row];
+		for (int i = 0; i < row; i++)
+		{
+			input[i] = new int[col];
+			for (int j = 0; j < col; j++)
+			{
+				cin >> input[i][j];
+			}
+		}
+		wavePrint(input, row, col);
+		cout << endl;
+	}
+}
