@@ -13,7 +13,7 @@ int getStringLength(char string[]) {
 
 void reverseStringWordWise(char input[]) {
   int length = getStringLength(input);
-  char reversedString[length+1];
+  char reversedString[length];
   //cout << length + 1 << endl;
   int j = 0, end = length;
   for(int i = length - 2; i >= 0; i--) {
