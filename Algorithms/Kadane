@@ -1,0 +1,32 @@
+//Kadane's Algorithm
+// Find max sum of a sub arrays from all
+//Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers that has the largest sum. 
+
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int size, startingIndexMax = 0;
+    cin >> size;
+    int arr[size];
+    for(int i = 0; i < size; i++)
+        cin >> arr[i];
+    
+    int current_sum = arr[size-1], max_sum = arr[size-1];
+    for(int i = size - 2; i >= 0; i--) {
+        current_sum = arr[i] > (current_sum + arr[i]) ? arr[i] : (current_sum + arr[i]);
+        if(max_sum < current_sum) {
+            max_sum = current_sum;
+            startingIndexMax = i;
+        }
+    }
+    cout << max_sum << endl;
+    int sum = 0;
+    while(sum != max_sum) {
+        cout << arr[startingIndexMax] << "\t";
+        sum += arr[startingIndexMax];
+        startingIndexMax++;
+    }
+}
+
