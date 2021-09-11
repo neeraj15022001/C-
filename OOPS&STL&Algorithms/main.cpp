@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 #include "PrefixSuffixArray.cpp"
 //#include "StudentTwo.cpp"
 //#include<array>
@@ -294,11 +296,29 @@ using namespace std;
 //    return 0;
 //}
 
-int main () {
-//    minimumFromSubArrays();
-//    maximumFromSubArrays();
-//    findMaximumSumSubArray();
-//    sort01();
-//    sort012();
-    prefixSumArrayImplementation();
-}
+//int main() {
+////    minimumFromSubArrays();
+////    maximumFromSubArrays();
+////    findMaximumSumSubArray();
+////    sort01();
+////    sort012();
+////    prefixSumArrayImplementation();
+//    int testCases = 0;
+//    cin >> testCases;
+//    while(testCases--) {
+//        int N;
+//        cin >> N;
+//        int arr[N];
+//        for(int i = 0; i < N; i++) {
+//            cin >> arr[i];
+//        }
+//        int numberOfQueries = 0;
+//        cin >> numberOfQueries;
+//        while(numberOfQueries--) {
+//            int L = 0, R = 0;
+//            cin >> L;
+//            cin >> R;
+//            SumOfInfiniteArray(arr, N, L, R);
+//        }
+//    }
+//}

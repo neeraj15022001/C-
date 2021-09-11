@@ -1,3 +1,8 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
 void printArray(int *arr, int size) {
     for (int i = 0; i < size; ++i) {
         cout << arr[i] << " ";
@@ -33,4 +38,50 @@ void prefixSumArrayImplementation() {
         cout << ans << endl;
     }
 
+}
+
+void SumOfInfiniteArray(int *arr, int N, int L ,int R) {
+    //Prefix
+    int prefix[N];
+    for (int i = 0; i < N; i++) {
+        if (i == 0) {
+            prefix[i] = arr[i];
+        } else {
+            prefix[i] = prefix[i - 1] + arr[i];
+        }
+    }
+    int totalSum = prefix[N - 1];
+//    Right Part
+    int fullIterations = (R) / N;
+    fullIterations = ceil(fullIterations);
+    fullIterations *= totalSum;
+    int rightOffset = (R % N) - 1;
+    if (rightOffset > -1) {
+        int temp = prefix[rightOffset];
+        rightOffset = temp;
+    } else {
+        rightOffset = 0;
+    }
+
+
+    int rightPart = rightOffset + fullIterations;
+
+//    Left Part
+    int fullLeftIterations = (L - 1) / N;
+    fullLeftIterations = ceil(fullLeftIterations);
+    fullLeftIterations *= totalSum;
+
+    int leftOffset = (L - 1) % N - 1;
+    if (leftOffset > -1) {
+        int temp = prefix[leftOffset];
+        leftOffset = temp;
+    } else {
+        leftOffset = 0;
+    }
+    int leftPart = fullLeftIterations + leftOffset;
+
+//    Total
+    cout << rightPart << " " << leftPart << endl;
+    int total = rightPart - leftPart;
+    cout << "Output: " << total << endl;
 }
