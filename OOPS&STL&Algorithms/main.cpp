@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#include "PrefixSuffixArray.cpp"
+#include "Queue.cpp"
 //#include "StudentTwo.cpp"
 //#include<array>
 //#include <vector>
@@ -322,3 +322,42 @@ using namespace std;
 //        }
 //    }
 //}
+
+//int main() {
+//    StackPractice sp;
+//    for (int i = 0; i <= 10; ++i) {
+//        sp.push(i*10);
+//    }
+//    cout << sp.getTop() << endl;
+//    sp.print();
+//    cout << sp.getTop() << endl;
+//    for (int i = 0; i <= 5 ; ++i) {
+//        sp.pop();
+//    }
+//    sp.print();
+//    cout << sp.getTop() << endl;
+//    cout << sp.getCapacity() << endl;
+//}
+
+int main() {
+    Queue q;
+    q.enqueue(10);
+    q.enqueue(20);
+    q.print();
+    cout << q.dequeue() << endl;
+    q.print();
+    q.enqueue(30);
+    q.enqueue(50);
+    q.enqueue(60);
+    q.enqueue(70);
+    q.enqueue(80);
+    q.enqueue(90);
+    q.print();
+    while (!q.isEmpty()) {
+        cout << q.dequeue() << endl;
+    }
+    cout << "dequeuing: " << q.dequeue() << endl;
+    cout << "printing: " << endl;
+    q.print();
+    cout << "peek:" << q.peek()<< endl;
+}

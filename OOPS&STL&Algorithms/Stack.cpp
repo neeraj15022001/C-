@@ -64,7 +64,7 @@ public:
     }
 
     void print() {
-        for(int i = 0; i < this->size(); i++) {
+        for(int i = 0; i < this->topValue(); i++) {
             cout << data[i] << " ";
         }
         cout << endl;
