@@ -1,8 +1,8 @@
 #include <iostream>
 
 using namespace std;
-
-#include "Queue.cpp"
+#include "SlidingWindow.cpp"
+// #include "Queue.cpp"
 //#include "StudentTwo.cpp"
 //#include<array>
 //#include <vector>
@@ -339,25 +339,30 @@ using namespace std;
 //    cout << sp.getCapacity() << endl;
 //}
 
+// int main() {
+//     Queue q;
+//     q.enqueue(10);
+//     q.enqueue(20);
+//     q.print();
+//     cout << q.dequeue() << endl;
+//     q.print();
+//     q.enqueue(30);
+//     q.enqueue(50);
+//     q.enqueue(60);
+//     q.enqueue(70);
+//     q.enqueue(80);
+//     q.enqueue(90);
+//     q.print();
+//     while (!q.isEmpty()) {
+//         cout << q.dequeue() << endl;
+//     }
+//     cout << "dequeuing: " << q.dequeue() << endl;
+//     cout << "printing: " << endl;
+//     q.print();
+//     cout << "peek:" << q.peek()<< endl;
+// }
+
+
 int main() {
-    Queue q;
-    q.enqueue(10);
-    q.enqueue(20);
-    q.print();
-    cout << q.dequeue() << endl;
-    q.print();
-    q.enqueue(30);
-    q.enqueue(50);
-    q.enqueue(60);
-    q.enqueue(70);
-    q.enqueue(80);
-    q.enqueue(90);
-    q.print();
-    while (!q.isEmpty()) {
-        cout << q.dequeue() << endl;
-    }
-    cout << "dequeuing: " << q.dequeue() << endl;
-    cout << "printing: " << endl;
-    q.print();
-    cout << "peek:" << q.peek()<< endl;
+    housingProblemMinimumSize();
 }
